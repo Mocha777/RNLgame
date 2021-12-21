@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" onclick="jump()"> <!--點擊以使用jump函式-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css"> <!--與style.css做連結-->
+    <script type="text/javascript">
+        var flag=0;
+        
+        function playAudio() {
+            
+            if(flag==0)
+            {
+                flag=flag+1;
+                const audio = document.createElement("audio");
+                audio.src = "music.mp3";
+                audio.loop=true;
+                audio.play(); 
+                //setTimeout(function(){for(var i =0;i<100;i++){audio.play();}},100);
+            }
+        }
+    </script>
+</head>
+<style>
+    img{
+        border-radius: 4px;
+    }
+</style>
+
+
+<body>
+
+    <div id="game">
+    <div id="character"></div>  
+    <div id="block"></div>
+    
+    </div>
+    <p> 分數 : <span id="scoreSpan"></span></p>
+
+    <p><button onclick="playAudio();">"跳"</button></p>
+</body>
+<script src="script.js"></script>
+</html>
+

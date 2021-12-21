@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+#game{
+    width: 700px;
+    height: 400px;
+    margin: auto;
+    border :2px solid black  ;
+    background-color: black;
+    background-image: url("back.jpg");
+    background-size: cover;
+    
+} 
+
+
+  /* */
+#character /*跳跳方塊*/
+{
+    width: 80px;
+    height: 120px;
+    background-image:url("yoruka.jpg");
+    background-size: cover;
+    position:relative;
+    top: 280px;   /*放下340px*/
+    
+}
+
+
+.animate/*添加畫面跳轉，以運行ＪＳ函數*/
+{
+    animation: jump 500ms linear;
+}
+@keyframes jump/*跳躍幅度，可以製造出一點懸停的感覺*/
+{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+#block  /*藍色移動方塊*/
+{
+    width: 50px;
+    height: 50px;
+    background-image: url("rock.jpg");
+    background-size: cover;
+    position: relative;
+    top: 250px;
+    left: 440px;
+    
+    animation: block 1s infinite linear; /*infinite可重複運行linear使速度相同*/
+    
+    
+}
+
+
+@keyframes block /*動畫*/
+{
+    0%{left: 660px;}/*初始點*/
+    100%{left: 0px;}/*結束點*/
+    
+}
+
+p{
+    text-align: center;
+}
+
+
+
+
+
+
+
