@@ -1,3 +1,4 @@
+
 window.onload = () => {
     console.warn('我到現在還在想,我到底在衝三小?');
     var yoru_container = document.querySelector("#yoru_container");
@@ -5,8 +6,12 @@ window.onload = () => {
     var yoru_pop = document.querySelector("#yoru_pop");
     var pop_count = 0;
     var counter = document.querySelector("#counter");
-    var sound_effect = new Audio('./source/pop.mp3');
-
+    var sound_effect0 = new Audio('./source/pop.mp3');
+    var sound_effect1 = new Audio('./source/pop1.mp3');
+    var sound_effect2 = new Audio('./source/pop2.mp3');
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
     function pop() {
         playSound();
         yoru.setAttribute("style","visibility: hidden;");
@@ -36,8 +41,18 @@ window.onload = () => {
     }
 
     function playSound(){
-        sound_effect.currentTime = 0;
-        sound_effect.play();
+        if(getRandomInt(3)==0){
+            sound_effect0.currentTime = 0;
+            sound_effect0.play();
+        }
+        else if(getRandomInt(3)==1){
+            sound_effect1.currentTime = 0;
+            sound_effect1.play();
+        }
+        else{
+            sound_effect2.currentTime = 0;
+            sound_effect2.play();          
+        }
     }
 
     function count_up() {
