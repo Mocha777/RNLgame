@@ -23,12 +23,12 @@ window.onload = () => {
         var count = localStorage.getItem("pop_count");
         if (count !== null) {
             pop_count = parseInt(count);
-            counter.innerHTML = pop_count; 
+            counter.innerHTML = pop_count;
         }
     };
     storage.save = function () {
         localStorage.setItem("pop_count", pop_count);
-    } 
+    }
 
     function isMobile() {
         try{ document.createEvent("TouchEvent"); return true; }
