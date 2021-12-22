@@ -5,7 +5,7 @@ window.onload = () => {
     var yoru_pop = document.querySelector("#yoru_pop");
     var pop_count = 0;
     var counter = document.querySelector("#counter");
-    var sound_effect = new Audio('./source/POP.mp3');
+    var sound_effect = new Audio('./source/pop.mp3');
 
     function pop() {
         playSound();
