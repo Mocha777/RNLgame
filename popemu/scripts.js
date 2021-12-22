@@ -28,7 +28,7 @@ window.onload = () => {
     };
     storage.save = function () {
         localStorage.setItem("pop_count", pop_count);
-    }
+    } 
 
     function isMobile() {
         try{ document.createEvent("TouchEvent"); return true; }
